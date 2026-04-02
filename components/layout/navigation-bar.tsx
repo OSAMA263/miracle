@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Button from "../ui/button";
-import Logo from "../ui/logo";
+import LogoLink from "../ui/logo";
 import { NAV_LINKS } from "@/_constants/nav-links";
 import { usePathname } from "next/navigation";
 import { ROUTES } from "@/_constants/routes";
@@ -11,7 +11,7 @@ export default function Navigation() {
 
   return (
     <header className="flex items-center justify-between py-10">
-      <Logo />
+      <LogoLink />
       <nav className="rounded-full p-3 bg-lightGray border border-white/5">
         <ul className="flex items-center font-smibold">
           {NAV_LINKS.map(({ url, label }) => (
