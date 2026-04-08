@@ -6,7 +6,7 @@ import { CONTACT_INFO } from "@/data/contact-info";
 
 export default function Footer() {
   return (
-    <footer className="py-20 border-t border-white/10">
+    <footer className="py-14 border-t border-white/10">
       <div className="grid grid-cols-3 gap-10 *:space-y-8 justify-items-center">
         <div>
           <LogoLink />

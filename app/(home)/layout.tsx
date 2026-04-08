@@ -9,15 +9,17 @@ export default function LayoutContainer({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-[70%] mx-auto space-y-36 relative z-50">
+    <div className="w-[70%] mx-auto relative z-50">
       <Navigation />
-      {children}
+      <div className="space-y-36">
+        {children}
 
-      {/* shared content across each page */}
-      <QuestionsAskedSection />
-      <ContactSection />
+        {/* shared content across each page */}
+        <QuestionsAskedSection />
+        <ContactSection />
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }

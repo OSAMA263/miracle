@@ -1,7 +1,7 @@
 "use client";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { CiStar } from "react-icons/ci";
+import { PiStarFourFill } from "react-icons/pi";
 import Slider from "react-slick";
 import ReactCountryFlag from "react-country-flag";
 
@@ -47,7 +47,7 @@ export default function AutoSlider(props: propsType) {
                     svg
                   />
                 ) : (
-                  <CiStar className="p-1 text-3xl border border-white/40 rounded-lg" />
+                  <PiStarFourFill className="p-px text-3xl border border-white/40 rounded" />
                 )}
               </span>
               <h2 className="font-bold text-xl capitalize">{name}</h2>

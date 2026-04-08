@@ -1,5 +1,8 @@
+import HeroPage from "@/components/layout/hero-page";
+
 export default function About() {
   return (
-    <div>page</div>
-  )
+      <HeroPage title="about" shiningText="us"/>
+
+  );
 }

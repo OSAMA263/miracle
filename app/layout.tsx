@@ -23,19 +23,16 @@ export default function RootLayout({
       className={`${unbounded.variable} h-full antialiased`}
     >
       <body className="min-h-dvh bg-blueGray text-white overflow-x-hidden">
-          <div
-            className="h-full"
-            style={{
-              backgroundImage: `
-            radial-gradient(500px circle at right center, rgb(6, 116, 133,0.2) , transparent 80%),
-            radial-gradient(500px circle at left center, rgb(6, 116, 133,0.2) , transparent 80%)
-          `,
-              backgroundSize: "100% 900px",
-              backgroundRepeat: "repeat-y",
-            }}
-          >
-            {children}
-          </div>
+        <div
+          className="h-full"
+          style={{
+            backgroundImage: `radial-gradient(500px circle at right center, rgb(6, 116, 133,0.2) , transparent 80%), radial-gradient(500px circle at left center, rgb(6, 116, 133,0.2) , transparent 80%)`,
+            backgroundSize: "100% 900px",
+            backgroundRepeat: "repeat-y",
+          }}
+        >
+          {children}
+        </div>
       </body>
     </html>
   );

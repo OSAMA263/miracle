@@ -10,7 +10,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <header className="flex items-center justify-between py-10 relative z-50">
+    <header className="flex absolute w-full items-center justify-between py-10 z-50">
       <LogoLink />
       <nav className="rounded-full p-3 bg-lightGray border border-white/5">
         <ul className="flex items-center font-smibold">
