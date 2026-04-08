@@ -12,7 +12,7 @@ type propsType = {
 };
 
 function Arrow() {
-  return <div className="hidden"></div>;
+  return <div className="hidden"/>;
 }
 
 export default function AutoSlider(props: propsType) {
