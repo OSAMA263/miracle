@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function ProgressBarY({ speed }: { speed?: number }) {
+export default function MovingLinesY({ speed }: { speed?: number }) {
   return (
     <div className="h-full relative w-0.5 bg-lightGray overflow-hidden">
       {/* progress bar */}
@@ -14,7 +14,7 @@ export default function ProgressBarY({ speed }: { speed?: number }) {
           ease: "linear",
         }}
         className="absolute w-full h-20 rounded-full bg-linear-to-b from-transparent via-lightAqua to-transparent"
-      ></motion.div>
+      />
     </div>
   );
 }

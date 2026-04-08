@@ -5,7 +5,6 @@ import { CiStar } from "react-icons/ci";
 import Slider from "react-slick";
 import ReactCountryFlag from "react-country-flag";
 
-
 type propsType = {
   speed?: number;
   className?: string;
@@ -27,6 +26,8 @@ export default function AutoSlider(props: propsType) {
     speed: speed,
     autoplaySpeed: speed,
     cssEase: "linear",
+    pauseOnHover: false,
+    pauseOnFocus: false,
     draggable: false,
     nextArrow: <Arrow />,
     prevArrow: <Arrow />,
@@ -40,7 +41,11 @@ export default function AutoSlider(props: propsType) {
             <div className="px-6 flex-center gap-2!">
               <span>
                 {icon ? (
-                  <ReactCountryFlag style={{width:30,height:30}} countryCode={icon} svg />
+                  <ReactCountryFlag
+                    style={{ width: 30, height: 30 }}
+                    countryCode={icon}
+                    svg
+                  />
                 ) : (
                   <CiStar className="p-1 text-3xl border border-white/40 rounded-lg" />
                 )}

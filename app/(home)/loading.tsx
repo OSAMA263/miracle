@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <div className="h-full fixed inset-0 w-screen left-1/2 -translate-x-1/2 top-0 flex items-center justify-center bg-blueGray">
+    <div className="h-dvh fixed left-1 top-0 w-full flex items-center justify-center bg-blueGray">
       <span className="size-20 border-2 border-darkBlue border-x-0 rounded-full animate-spin"></span>
     </div>
   );

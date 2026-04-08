@@ -17,7 +17,39 @@ body {
   a {
     transition: all 0.4s;
   }
+  input,
+  textarea {
+    border-radius: 999px;
+    border: 1px solid rgba(128, 128, 128, 0.329);
+    padding-inline: 1.6rem;
+    width:100%;
+    padding-block: 1rem;
+    background-color: #1b222556;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    &:focus {
+      border-color: rgba(128, 128, 128, 0.452);
+      background-color: var(--color-blueGray);
+    }
+  }
 }
+@utility shining{
+ border: 1px solid transparent;
+  background: linear-gradient(
+    to left,
+    var(--color-lightAqua),
+    var(--color-darkBlue) 50%,
+    var(--color-lightAqua)
+  );
+  background-size: 200% 100%;
+  background-position: left center;
+  transition: all 0.7s ease;
+  &:hover {
+    background-position: right center;
+  }
+}
+
 /* overriding global styles */
 @layer utilities {
   .flex-center {
@@ -39,6 +71,7 @@ body {
   font-weight: 600;
   z-index: 0;
 }
+
 .shining {
   border: 1px solid transparent;
   background: linear-gradient(

@@ -10,7 +10,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <header className="flex items-center justify-between py-10">
+    <header className="flex items-center justify-between py-10 relative z-50">
       <LogoLink />
       <nav className="rounded-full p-3 bg-lightGray border border-white/5">
         <ul className="flex items-center font-smibold">
@@ -18,7 +18,7 @@ export default function Navigation() {
             <li key={label}>
               <Link
                 href={url}
-                className={`px-4 py-2 rounded-full hover:text-white hover:bg-blueGray/50 ${pathname === url ? "text-lightAqua hover:text-lightAqua!" : "text-white/40"}`}
+                className={`px-4 py-2 rounded-full hover:text-white ${pathname === url ? "text-lightAqua hover:text-lightAqua! bg-blueGray/50" : "text-white/40"}`}
               >
                 {label}
               </Link>
