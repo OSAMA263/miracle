@@ -28,7 +28,7 @@ export default function Button(props: ButtonTypes) {
 
   return (
     <button
-      className={`btn ${variant} ${className}`}
+      className={`btn disabled:opacity-50! ${variant} ${className}`}
       {...rest}
     >
       {children}

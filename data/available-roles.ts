@@ -1,0 +1,17 @@
+export const JOB_ROLES = [
+  { label: "Frontend Developer", value: "frontend_developer" },
+  { label: "Backend Developer", value: "backend_developer" },
+  { label: "Full Stack Developer", value: "fullstack_developer" },
+  { label: "Mobile App Developer", value: "mobile_developer" },
+  { label: "DevOps Engineer", value: "devops_engineer" },
+  { label: "Software Engineer", value: "software_engineer" },
+  { label: "QA Engineer", value: "qa_engineer" },
+  { label: "UI/UX Designer", value: "ui_ux_designer" },
+  { label: "Data Engineer", value: "data_engineer" },
+  { label: "Data Scientist", value: "data_scientist" },
+  { label: "Machine Learning Engineer", value: "ml_engineer" },
+  { label: "Cloud Engineer", value: "cloud_engineer" },
+  { label: "Security Engineer", value: "security_engineer" },
+  { label: "Database Administrator", value: "dba" },
+  { label: "Technical Support Engineer", value: "support_engineer" },
+];
