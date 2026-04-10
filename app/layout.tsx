@@ -22,7 +22,7 @@ export default function RootLayout({
       lang="en"
       className={`${unbounded.variable} h-full antialiased`}
     >
-      <body className="min-h-dvh bg-blueGray text-white overflow-x-hidden">
+      <body className="min-h-dvh bg-blueGray text-white overflow-x-hidden!">
         <div
           className="h-full"
           style={{
