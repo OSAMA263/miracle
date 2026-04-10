@@ -14,7 +14,7 @@ export default function ApplicationForm() {
   );
 
   return (
-    <div className="space-y-10 w-[90%] mx-auto">
+    <div className="space-y-20 w-[90%] mx-auto">
       <SectionHeader>
         <h2>
           Jop <span>Application</span>
@@ -27,7 +27,7 @@ export default function ApplicationForm() {
 
       <form
         action={formAction}
-        className="space-y-4 [&_p]:text-red-400"
+        className="space-y-6 [&_p]:text-red-400"
       >
         {/* FULL NAME */}
         <div>

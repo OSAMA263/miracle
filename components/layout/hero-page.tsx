@@ -19,7 +19,7 @@ export default function HeroPage({ title, shiningText }: TypeProps) {
   return (
     <section
       id="hero"
-      className="relative h-140 grid grid-cols-6 justify-items-center"
+      className="relative h-180 grid grid-cols-6 justify-items-center"
     >
       {/* 5 moving lines from top to bottom */}
       {linesMoveSpeed.map((speed, i) => (
@@ -28,7 +28,7 @@ export default function HeroPage({ title, shiningText }: TypeProps) {
 
       {/* auto moving aslider */}
 
-      <div className="w-screen absolute top-full -translate-x-1/2 left-1/2 bg-lightGray">
+      <div className="w-screen absolute bottom-0 -translate-x-1/2 left-1/2 opacity- bg-lightGray">
         <AutoSlider data={SPONSORS_SLIDER} />
       </div>
 

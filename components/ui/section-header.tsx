@@ -21,7 +21,7 @@ export default function SectionHeader({
           {title}
         </span>
       )}
-      <div className={`shining-text [&>h2]:text-4xl`}>{children}</div>
+      <div className={`shining-text [&>h2]:text-4xl capitalize`}>{children}</div>
     </div>
   );
 }

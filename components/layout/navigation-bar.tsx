@@ -27,7 +27,6 @@ export default function Navigation() {
         </ul>
       </nav>
       <div className="flex items-center gap-4">
-        <button>theme</button>
         <Button variant="shining" as="link" href={ROUTES.CONTACT}>
           Contact Us
         </Button>

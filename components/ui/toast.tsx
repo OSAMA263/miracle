@@ -29,7 +29,7 @@ export default function Toast({ status, message }: typeProps) {
           animate={{ y: "0%" }}
           transition={{ duration: 0.5 }}
           exit={{ y: "200%", transition: { delay: 2 } }}
-          className="fixed w-fit z-50 bg-darkBlue p-1 px-2 rounded bottom-0 right-12 flex items-center gap-2"
+          className="fixed w-fit z-50 bg-darkBlue p-2 px-3 rounded bottom-0 right-12 flex items-center gap-2"
         >
           {status == "success" ? (
             <BsCheck2Circle className="text-green-400 text-xl" />
