@@ -124,6 +124,7 @@ export default function ApplicationForm() {
         {/* show toast confirm the application was sent */}
         {state?.success && (
           <Toast
+            key={state?.success}
             status={"success"}
             message={"Your application was sent successefuly!"}
           />

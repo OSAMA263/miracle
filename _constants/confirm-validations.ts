@@ -18,5 +18,5 @@ export async function checkValidation({
     };
   }
   await delay(600);
-  return { success: true };
+  return { success: Date.now() };
 }

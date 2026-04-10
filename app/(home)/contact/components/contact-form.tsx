@@ -71,11 +71,14 @@ export default function ContactForm() {
           {state?.errors?.message && <p>{state.errors.message[0]}</p>}
         </div>
 
-      {/* show toast confirm the application was sent */}
+        {/* show toast confirm the application was sent */}
         {state?.success && (
           <Toast
+            key={state?.success}
             status={"success"}
-            message={"Your message was sent, than you for contacting us"}
+            message={
+              "Your message was sent, than you for contacting us"
+            }
           />
         )}
         <Button
