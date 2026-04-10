@@ -1,13 +1,13 @@
 import { checkValidation } from "@/_constants/confirm-validations";
-import { applicationSchema } from "@/validation/applicationSchema";
+import { contactSchema } from "@/validation/contactSchema";
 
-export async function applicationAction(
+export async function contactAction(
   prevState: FormData,
   formData: FormData,
 ) {
   const result = await checkValidation({
     data: formData,
-    schema: applicationSchema,
+    schema: contactSchema,
   });
 
   return result;

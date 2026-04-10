@@ -72,21 +72,6 @@ body {
   z-index: 0;
 }
 
-.shining {
-  border: 1px solid transparent;
-  background: linear-gradient(
-    to left,
-    var(--color-lightAqua),
-    var(--color-darkBlue) 50%,
-    var(--color-lightAqua)
-  );
-  background-size: 200% 100%;
-  background-position: left center;
-  transition: all 0.7s ease;
-  &:hover {
-    background-position: right center;
-  }
-}
 .filling {
   border: 1px solid var(--color-darkBlue);
   background: var(--color-blueGray);
