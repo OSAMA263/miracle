@@ -22,7 +22,10 @@ export default function Button(props: ButtonTypes) {
   // link to a diffrent url
   const link = (
     <div>
-      <Link className={`btn ${variant} ${className}`} {...rest}>
+      <Link
+        className={`btn max-md:text-sm ${variant} ${className}`}
+        {...rest}
+      >
         {children}
       </Link>
     </div>
@@ -31,7 +34,7 @@ export default function Button(props: ButtonTypes) {
   // a normal button
   const btn = (
     <button
-      className={`btn disabled:opacity-50! ${variant} ${className}`}
+      className={`btn disabled:opacity-50! max-md:text-sm ${variant} ${className}`}
       {...rest}
     >
       {children}

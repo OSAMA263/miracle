@@ -26,7 +26,7 @@ const THREE_COLS = [
 export default function WhyChooseUsSection() {
   return (
     <section id="choose us,i beg u">
-      <Card className="space-y-20 px-20 bg-lightGray/60!">
+      <Card className="space-y-20 xl:px-20 bg-lightGray/60!">
         <SectionHeader title="Why Choose Us">
           <h2>
             Trusted experts committed to accelerating{" "}
@@ -35,7 +35,7 @@ export default function WhyChooseUsSection() {
         </SectionHeader>
 
         {/* 3 reasons columns */}
-        <div className="grid grid-cols-3 text-balance divide-x divide-white/10">
+        <div className="grid lg:grid-cols-3 max-lg:gap-6 text-balance lg:divide-x divide-white/10">
           <EleAniamtion>
             {THREE_COLS.map(({ Icon, title, des }) => (
               <div key={title} className="space-y-6 rotate-icon px-8">

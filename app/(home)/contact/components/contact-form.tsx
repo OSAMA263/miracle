@@ -14,7 +14,7 @@ export default function ContactForm() {
   );
 
   return (
-    <div className="space-y-10 pe-4">
+    <div className="space-y-10 pe-4 max-lg:order-2">
       <SectionHeader>
         <h2>
           Get In <span>Touch Now</span>

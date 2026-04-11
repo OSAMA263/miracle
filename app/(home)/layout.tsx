@@ -10,8 +10,8 @@ export default function LayoutContainer({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-[70%] mx-auto relative z-50">
-      <Navigation />
+    <div className="xl:w-[70%] lg:w-[85%] w-[98%] mx-auto relative z-50">
+      {/* <Navigation /> */}
       <div className="space-y-36">
         
         {/* in the first render we need min h vh so the shared content dont show first and looks awkward */}
@@ -21,7 +21,7 @@ export default function LayoutContainer({
         <QuestionsAskedSection />
         <ContactSection />
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );

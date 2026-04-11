@@ -7,9 +7,9 @@ export default function ContactSection() {
   return (
     <section
       id="contact-us"
-      className="bg-lightGray rounded-3xl p-20 bg-[url('/images/contact-form-bg.png')] bg-no-repeat bg-cover"
+      className="bg-lightGray/60 rounded-3xl md:p-20 p-10 bg-[url('/images/contact-form-bg.png')] bg-no-repeat bg-cover bg-center"
     >
-      <div className="w-[70%] mx-auto flex-center space-y-4 flex-col!">
+      <div className="md:w-[70%] mx-auto flex-center space-y-4 flex-col!">
         <SectionHeader title="contact us">
           <h2>
             We are Just a <span>click away</span>
@@ -21,7 +21,7 @@ export default function ContactSection() {
         </SectionHeader>
         {/* benefits */}
 
-        <div className="flex justify-center flex-wrap items-center gap-8">
+        <div className="flex justify-center flex-wrap items-center lg:gap-8 gap-2">
           <EleAniamtion>
             <Benefit>Dedicated Support Team</Benefit>
             <Benefit>Fast and Reliable Assistance</Benefit>
@@ -30,7 +30,7 @@ export default function ContactSection() {
         </div>
 
         {/* form */}
-        <form action="" className="w-full flex gap-10">
+        <form action="" className="w-full lg:flex gap-10">
           <input
             type="email"
             required
@@ -40,7 +40,7 @@ export default function ContactSection() {
             variant="filling"
             as="button"
             type="submit"
-            className="py-4! px-12!"
+            className="py-4! px-12! mx-auto mt-2"
           >
             Subscribe Now
           </Button>
@@ -53,7 +53,7 @@ export default function ContactSection() {
 const Benefit = ({ children }: { children: React.ReactNode }) => {
   return (
     <p className="rounded-full text-white/60 flex items-center gap-2 px-4 py-1 border border-white/10 text-sm">
-      <CiCircleCheck className="shining text-2xl relative text-black overflow-hidden rounded-full" />{" "}
+      <CiCircleCheck className="shining md:text-2xl relative text-black overflow-hidden rounded-full" />{" "}
       {children}
     </p>
   );

@@ -8,7 +8,7 @@ import { OUR_TOOLS } from "@/data/specialties";
 export default function SpecialtiesSection() {
   return (
     <section id="our-specialties" className="space-y-18">
-      <div className="grid grid-cols-2 gap-20 ">
+      <div className="grid xl:grid-cols-2 gap-20">
         <SectionHeader
           title="Our Specialties"
           className="[&>div]:space-y-8 items-start! text-start!"
@@ -28,7 +28,7 @@ export default function SpecialtiesSection() {
         </SectionHeader>
 
         {/* four steps */}
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <EleAniamtion>
             {OUR_TOOLS.map(({ Icon, title, des }) => (
               <div

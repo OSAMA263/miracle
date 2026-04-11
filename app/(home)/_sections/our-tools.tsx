@@ -34,7 +34,7 @@ export default function OurToolsSection() {
       </SectionHeader>
 
       {/* three cards */}
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid lg:grid-cols-3 xl:gap-8 gap-4">
         {cards.map(({ title, amount, des }, i) => (
           <Card
             i={i}
@@ -42,9 +42,9 @@ export default function OurToolsSection() {
             className="filling-animation transition-none!"
             key={title}
           >
-            <div className="relative z-10 space-y-5">
+            <div className="relative z-10 md:space-y-5 space-y-2">
               {" "}
-              <span className="text-5xl font-bold text-lightAqua/80 mb-16 block">
+              <span className="text-5xl font-bold text-lightAqua/80 md:mb-16 mb-8 block">
                 {amount}
               </span>
               <h1 className="font-bold">{title}</h1>

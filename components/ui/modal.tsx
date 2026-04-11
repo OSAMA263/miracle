@@ -36,7 +36,7 @@ export default function Modal(props: propsType) {
     >
       {/* main modalbody */}
       <div
-        className="rounded-lg size-1/2 bg-black"
+        className="rounded-lg lg:w-1/2 h-1/2 w-[90%] bg-black"
         onClick={(e) => e.stopPropagation()}
       >
         {children}

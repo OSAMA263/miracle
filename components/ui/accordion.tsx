@@ -46,7 +46,7 @@ const AccordionItem = (props: AccordionItemType) => {
       <div className="bg-lightGray rounded-3xl overflow-hidden">
         <button
           onClick={handleACtiveItem}
-          className={`flex text-xl font-smibold  items-center transition-all duration-500 gap-x-8 justify-between p-6 ${active === ind ? "bg-white/10" : "bg-lightGray"}`}
+          className={`flex lg:text-xl font-smibold  items-center transition-all duration-500 gap-x-8 justify-between p-6 ${active === ind ? "bg-white/10" : "bg-lightGray"}`}
         >
           <p className="text-start">{item.title}</p>
           <span
@@ -58,7 +58,7 @@ const AccordionItem = (props: AccordionItemType) => {
         <div
           className={`text-white/60 transition-all duration-500 ${active == ind ? "max-h-100" : "max-h-0"}`}
         >
-          <p className="p-6 border-t">{item.answer}</p>
+          <p className="p-6 border-t max-lg:text-sm">{item.answer}</p>
         </div>
       </div>{" "}
     </EleAniamtion>

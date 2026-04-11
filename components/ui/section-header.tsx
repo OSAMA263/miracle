@@ -18,13 +18,13 @@ export default function SectionHeader({
     >
       {title && (
         <EleAniamtion>
-          <span className="rounded-tag uppercase">
+          <span className="rounded-tag max-lg:text-xs uppercase">
             <Logo />
             {title}
           </span>
         </EleAniamtion>
       )}
-      <div className={`shining-text [&>h2]:text-4xl capitalize`}>
+      <div className={`shining-text [&>h2]:lg:text-4xl text-xl capitalize [&>p]:max-lg:text-sm`}>
         <EleAniamtion>{children}</EleAniamtion>
       </div>
     </div>

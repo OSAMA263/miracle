@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <>
       <HeroPage title="Contact" shiningText="us" />
-      <div className="grid grid-cols-2 gap-4 divide-white/5 divide-x">
+      <div className="grid lg:grid-cols-2 gap-4 divide-white/5 max-lg:gap-20 lg:divide-x">
         <ContactForm />
         <ContactInformation />
       </div>

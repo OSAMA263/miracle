@@ -30,7 +30,7 @@ export default function ShiningImg(props: PropsType) {
         initial={{ width: "100%" }}
         whileInView={{ width: "0%" }}
         transition={{ duration: 1 }}
-        viewport={{ amount: 0.6 }}
+        viewport={{ amount: 0.6, once: true }}
         className="absolute bg-lightGray z-50 size-full"
       />
 
@@ -46,7 +46,7 @@ export default function ShiningImg(props: PropsType) {
         className="size-full object-cover"
       />
       {playerBtn && (
-        <div className="absolute z-10 top-1/2 left-1/2 -transalte-x-1/2 -translate-y-1/2">
+        <div className="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           {/* pulsing circl on the button */}
           <div className="bg-white/60 inset-0 rounded-full animate-ping absolute" />
 

@@ -12,7 +12,7 @@ export default function Card(props: propTypes) {
 
   const card = (
     <div
-      className={`border transition-all duration-500 border-white/5 bg-lightGray rounded-2xl p-8 py-12 overflow-hidden relative ${className ?? ""}`}
+      className={`border transition-all duration-500 border-white/5 bg-lightGray/35 rounded-2xl p-8 py-12 overflow-hidden relative ${className ?? ""}`}
     >
       {children}
     </div>

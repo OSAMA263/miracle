@@ -27,7 +27,7 @@ export default function EleAniamtion({
               delay: i ? i * 0.12 : ind * 0.12,
               type: "tween",
             }}
-            // viewport={{ once:true }}
+            viewport={{ once:true }}
             {...child.props}
           />
         );

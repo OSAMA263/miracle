@@ -27,7 +27,7 @@ export default function Hero() {
     <section id="hero" className="pt-60">
       <GlowingCircle className="flex-center flex-col gap-14!">
         <SectionHeader
-          className="space-y-2 text-center [&_h2]:text-5xl!"
+          className="space-y-2 text-center [&_h2]:lg:text-5xl!"
           title="Modernize.Automate.Acceleracte."
         >
           <h2>
@@ -60,9 +60,10 @@ export default function Hero() {
           <p className="text-white/30 uppercase">
             strategic technology partners
           </p>
-          <div className="flex-center rounded-xl py-12 px-20 bg-white gap-16!">
+          <div className="flex-center rounded-xl lg:py-12 p-4 lg:px-20 bg-white lg:gap-16! gap-2!">
             {sponsors.map(({ img, name }) => (
               <Image
+                className="max-sm:w-20"
                 loading="eager"
                 alt={name}
                 src={img}

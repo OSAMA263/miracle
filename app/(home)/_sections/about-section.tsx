@@ -27,17 +27,17 @@ export default function AboutSection() {
       </SectionHeader>
 
       {/* our mission */}
-      <div className="flex-center gap-12!">
+      <div className="lg:flex-center gap-12!">
         <EleAniamtion>
-          <div className="flex-center flex-col gap-0! shining-text flex-1">
-            <span className="text-[12rem] leading-tight">3</span>
-            <p className="rounded-tag border-transparent!">
+          <div className="flex-center mb-10 flex-col gap-0! shining-text flex-1">
+            <span className="text-[12rem] leading-tight block">3</span>
+            <p className="rounded-tag max-lg:text-sm border-transparent!">
               Years Of Experience
             </p>
           </div>
         </EleAniamtion>
 
-        <div className="grid grid-cols-2 gap-10 flex-2">
+        <div className="grid md:grid-cols-2 md:gap-10 gap-6 flex-2">
           {OUR_MISSION.map(({ title, Icon, des }) => (
             <div
               className="space-y-4 hover:[&>svg]:text-white hover:[&>svg]:rotate-y-180"
@@ -45,13 +45,13 @@ export default function AboutSection() {
             >
               <EleAniamtion>
                 <Icon className="text-darkBlue text-5xl" />
-                <h2 className="font-bold text-2xl">{title}</h2>
-                <p className="text-white/60">{des}</p>
+                <h2 className="font-bold lg:text-2xl">{title}</h2>
+                <p className="max-lg:text-sm text-white/60">{des}</p>
               </EleAniamtion>
             </div>
           ))}
           <EleAniamtion>
-            <p className="col-span-2 text-white/60">
+            <p className="md:col-span-2 text-white/60 max-lg:text-sm">
               We deliver enterprise projects with Red Hat across
               Europe. We have established operations in the UAE and
               are building a full Center of Excellence in Egypt.

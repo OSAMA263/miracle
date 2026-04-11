@@ -16,8 +16,8 @@ export default function FeaturesSection() {
         </p>
       </SectionHeader>
 
-      {/* four cols features */}
-      <div className="grid grid-cols-4 gap-8">
+      {/* 4 cols features */}
+      <div className="grid xl:grid-cols-4 md:grid-cols-2 2xl:gap-8 gap-2">
         {FREATURES.map(({ Icon, title, des }, i) => (
           <Card
             i={i}

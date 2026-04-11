@@ -8,7 +8,7 @@ export default function QuestionsAskedSection() {
   return (
     <section
       id="most common quesitons"
-      className="grid grid-cols-2 items-center gap-x-10"
+      className="grid lg:grid-cols-2 items-center xl:gap-10 gap-4"
     >
       <div>
         <SectionHeader
@@ -20,7 +20,7 @@ export default function QuestionsAskedSection() {
           </h2>
           <div className="flex items-center gap-4 mt-6">
             <AiOutlineMail className="text-darkBlue text-5xl" />
-            <div className="space-y-1">
+            <div className="space-y-1 max-sm:text-xs">
               <h2 className="text-xl font-bold">Get in Contact</h2>
               <a
                 href="mailto:osamaelseify2@gmail.com"

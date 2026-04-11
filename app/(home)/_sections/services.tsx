@@ -11,7 +11,7 @@ export default function ServicesSection() {
       className="flex-center flex-col gap-16!"
     >
       {/* header */}
-      <div className="grid grid-cols-2 items-center">
+      <div className="grid md:grid-cols-2 items-center gap-2">
         <SectionHeader
           title="services we deliver"
           className="items-start! text-start!"
@@ -32,14 +32,14 @@ export default function ServicesSection() {
         </Button>
       </div>
 
-      {/* services we deliver */}
-      <div className="grid grid-cols-3 gap-10">
+      {/* services we deliver 3*3 cards */}
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 xl:gap-10 gap-2">
           {SERVICES.map(({ Icon, title, des },i) => (
             <Card
             slide
             i={i}
               key={title}
-              className="hover:-translate-y-4 hover:transition-all hover:[&>svg]:rotate-y-180 space-y-10"
+              className="hover:-translate-y-4 hover:transition-all hover:[&>svg]:rotate-y-180 md:space-y-10 space-y-2"
             >
               <Icon className="text-5xl text-lightAqua transition-all duration-500" />
               <h2 className="font-bold">{title}</h2>

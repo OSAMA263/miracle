@@ -12,7 +12,7 @@ type propsType = {
 };
 
 function Arrow() {
-  return <div className="hidden"/>;
+  return <div className="hidden" />;
 }
 
 export default function AutoSlider(props: propsType) {
@@ -31,6 +31,22 @@ export default function AutoSlider(props: propsType) {
     draggable: false,
     nextArrow: <Arrow />,
     prevArrow: <Arrow />,
+    responsive: [
+      {
+        breakpoint: 1546,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 924,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -47,7 +63,7 @@ export default function AutoSlider(props: propsType) {
                     svg
                   />
                 ) : (
-                  <PiStarFourFill className="p-px text-3xl border border-white/40 rounded" />
+                  <PiStarFourFill className="p-px md:text-3xl border border-white/40 rounded" />
                 )}
               </span>
               <h2 className="font-bold text-xl capitalize">{name}</h2>
