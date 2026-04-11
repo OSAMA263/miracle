@@ -34,7 +34,7 @@ export default function QuestionsAskedSection() {
 
         {/* image */}
         <ShiningImg
-          className="w-full h-72 mt-6"
+          className="w-full h-72 mt-6 [&>#sliding-overlay]:bg-darkBlue/50!"
           src={"/images/faq.jpg"}
         />
       </div>

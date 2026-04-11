@@ -2,6 +2,7 @@ import { ROUTES } from "@/_constants/routes";
 import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
 import SectionHeader from "@/components/ui/section-header";
+import EleAniamtion from "@/components/ui/sliding-ele-animation";
 import { BsBroadcast, BsCardList, BsInbox } from "react-icons/bs";
 
 const THREE_COLS = [
@@ -35,17 +36,25 @@ export default function WhyChooseUsSection() {
 
         {/* 3 reasons columns */}
         <div className="grid grid-cols-3 text-balance divide-x divide-white/10">
-          {THREE_COLS.map(({ Icon, title, des }) => (
-            <div key={title} className="space-y-6 rotate-icon px-8">
-              <Icon className="text-4xl text-darkBlue transition-all duration-500" />
-              <h2 className="font-bold text-lg">{title}</h2>
-              <p className="text-white/60">{des}</p>
-            </div>
-          ))}
+          <EleAniamtion>
+            {THREE_COLS.map(({ Icon, title, des }) => (
+              <div key={title} className="space-y-6 rotate-icon px-8">
+                <Icon className="text-4xl text-darkBlue transition-all duration-500" />
+                <h2 className="font-bold text-lg">{title}</h2>
+                <p className="text-white/60">{des}</p>
+              </div>
+            ))}
+          </EleAniamtion>
         </div>
 
         {/* link */}
-        <Button as="link" href={ROUTES.CONTACT} className="rounded-xl! py-1! mx-auto" variant="shining">
+        <Button
+          slide
+          as="link"
+          href={ROUTES.CONTACT}
+          className="rounded-xl! py-1! mx-auto"
+          variant="shining"
+        >
           Let build something together.
         </Button>
       </Card>

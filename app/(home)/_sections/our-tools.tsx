@@ -1,5 +1,6 @@
 import Card from "@/components/ui/card";
 import SectionHeader from "@/components/ui/section-header";
+import EleAniamtion from "@/components/ui/sliding-ele-animation";
 
 const cards = [
   {
@@ -34,8 +35,13 @@ export default function OurToolsSection() {
 
       {/* three cards */}
       <div className="grid grid-cols-3 gap-8">
-        {cards.map(({ title, amount, des }) => (
-          <Card className="filling-animation" key={title}>
+        {cards.map(({ title, amount, des }, i) => (
+          <Card
+            i={i}
+            slide
+            className="filling-animation transition-none!"
+            key={title}
+          >
             <div className="relative z-10 space-y-5">
               {" "}
               <span className="text-5xl font-bold text-lightAqua/80 mb-16 block">
@@ -47,12 +53,13 @@ export default function OurToolsSection() {
           </Card>
         ))}
       </div>
-
-      <p className="text-center text-white/60">
-        OPSERA bridges this gap — delivering platform engineering,
-        cloud-native architecture, and AI-driven automation under one
-        roof.
-      </p>
+      <EleAniamtion>
+        <p className="text-center text-white/60">
+          OPSERA bridges this gap — delivering platform engineering,
+          cloud-native architecture, and AI-driven automation under
+          one roof.
+        </p>
+      </EleAniamtion>
     </section>
   );
 }

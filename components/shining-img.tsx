@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Button from "./ui/button";
 import { TbPlayerPlayFilled } from "react-icons/tb";
@@ -23,6 +24,16 @@ export default function ShiningImg(props: PropsType) {
     <div
       className={`size-full hover:[&>#overlay]:w-[200%] hover:[&>#overlay]:opacity-0 rounded-3xl overflow-hidden relative ${className}`}
     >
+      {/* slide out animtion div */}
+      <motion.div
+        id="sliding-overlay"
+        initial={{ width: "100%" }}
+        whileInView={{ width: "0%" }}
+        transition={{ duration: 1 }}
+        viewport={{ amount: 0.6 }}
+        className="absolute bg-lightGray z-50 size-full"
+      />
+
       {/* overlay galssy effect on hover */}
       <div
         id="overlay"

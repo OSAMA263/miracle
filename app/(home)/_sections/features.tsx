@@ -18,8 +18,13 @@ export default function FeaturesSection() {
 
       {/* four cols features */}
       <div className="grid grid-cols-4 gap-8">
-        {FREATURES.map(({ Icon, title, des }) => (
-          <Card key={title} className="py-6! filling-animation">
+        {FREATURES.map(({ Icon, title, des }, i) => (
+          <Card
+            i={i}
+            slide
+            key={title}
+            className="py-6! filling-animation transition-none!"
+          >
             <div className="relative z-10 space-y-3 hover:[&>svg]:rotate-y-180 hover:[&>svg]:text-white">
               <Icon className="text-4xl mb-10 text-darkBlue transition-all duration-500" />
               <h2 className="font-bold text-xl">{title}</h2>

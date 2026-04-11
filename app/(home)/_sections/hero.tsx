@@ -3,6 +3,7 @@ import AutoSlider from "@/components/auto-slider";
 import GlowingCircle from "@/components/glowing-circle";
 import Button from "@/components/ui/button";
 import SectionHeader from "@/components/ui/section-header";
+import EleAniamtion from "@/components/ui/sliding-ele-animation";
 import { countries } from "@/data/countries";
 import Image from "next/image";
 
@@ -33,22 +34,27 @@ export default function Hero() {
             Modernize. Automate.{" "}
             <span className="font-bold">Acceleracte.</span>
           </h2>
-          <p className="text-white/60">
+          <p className="text-white/60 mt-10">
             Transforming Through Modern Platform Engineering and Cloud
             Native Solutions
           </p>
         </SectionHeader>
 
         {/* two link btns */}
-        <div className="flex-center">
-          <Button href={ROUTES.CONTACT} variant="filling" as="link">
-            Get Started
-          </Button>
-          <Button href={ROUTES.SERVICES} variant="shining" as="link">
-            Learn More
-          </Button>
-        </div>
-
+        <EleAniamtion i={0.4}>
+          <div className="flex-center">
+            <Button href={ROUTES.CONTACT} variant="filling" as="link">
+              Get Started
+            </Button>
+            <Button
+              href={ROUTES.SERVICES}
+              variant="shining"
+              as="link"
+            >
+              Learn More
+            </Button>
+          </div>
+        </EleAniamtion>
         {/* sponsors */}
         <div className="flex-center flex-col">
           <p className="text-white/30 uppercase">

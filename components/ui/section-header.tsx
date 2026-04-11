@@ -1,4 +1,5 @@
 import { Logo } from "./logo";
+import EleAniamtion from "./sliding-ele-animation";
 
 type PropsType = {
   title?: string;
@@ -16,12 +17,16 @@ export default function SectionHeader({
       className={`flex-center flex-col text-center gap-6! ${className ?? ""}`}
     >
       {title && (
-        <span className="rounded-tag uppercase">
-          <Logo />
-          {title}
-        </span>
+        <EleAniamtion>
+          <span className="rounded-tag uppercase">
+            <Logo />
+            {title}
+          </span>
+        </EleAniamtion>
       )}
-      <div className={`shining-text [&>h2]:text-4xl capitalize`}>{children}</div>
+      <div className={`shining-text [&>h2]:text-4xl capitalize`}>
+        <EleAniamtion>{children}</EleAniamtion>
+      </div>
     </div>
   );
 }

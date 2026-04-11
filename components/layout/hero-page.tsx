@@ -5,6 +5,7 @@ import SectionHeader from "../ui/section-header";
 import MovingLinesY from "../moving-lines-y";
 import AutoSlider from "../auto-slider";
 import { SPONSORS_SLIDER } from "@/data/sponsors-auto-slider";
+import EleAniamtion from "../ui/sliding-ele-animation";
 
 type TypeProps = {
   title: string;
@@ -39,9 +40,11 @@ export default function HeroPage({ title, shiningText }: TypeProps) {
             {title} <span>{shiningText}</span>
           </h2>
         </SectionHeader>
-        <h1 className="text-white/60">
-          home / {pathname.split("/")}
-        </h1>
+        <EleAniamtion>
+          <h1 className="text-white/60">
+            home / {pathname.split("/")}
+          </h1>
+        </EleAniamtion>
       </div>
     </section>
   );

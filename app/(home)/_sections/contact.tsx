@@ -1,7 +1,7 @@
 import { CiCircleCheck } from "react-icons/ci";
-
 import SectionHeader from "@/components/ui/section-header";
 import Button from "@/components/ui/button";
+import EleAniamtion from "@/components/ui/sliding-ele-animation";
 
 export default function ContactSection() {
   return (
@@ -22,9 +22,11 @@ export default function ContactSection() {
         {/* benefits */}
 
         <div className="flex justify-center flex-wrap items-center gap-8">
-          <Benefit>Dedicated Support Team</Benefit>
-          <Benefit>Fast and Reliable Assistance</Benefit>
-          <Benefit>Multiple Ways to Reach Us</Benefit>
+          <EleAniamtion>
+            <Benefit>Dedicated Support Team</Benefit>
+            <Benefit>Fast and Reliable Assistance</Benefit>
+            <Benefit>Multiple Ways to Reach Us</Benefit>
+          </EleAniamtion>
         </div>
 
         {/* form */}

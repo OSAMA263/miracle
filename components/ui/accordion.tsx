@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import EleAniamtion from "./sliding-ele-animation";
 
 type DataType = { title: string; answer: string };
 
@@ -41,23 +42,25 @@ const AccordionItem = (props: AccordionItemType) => {
   }
 
   return (
-    <div className="bg-lightGray rounded-3xl overflow-hidden">
-      <button
-        onClick={handleACtiveItem}
-        className={`flex text-xl font-smibold  items-center transition-all duration-500 gap-x-8 justify-between p-6 ${active === ind ? "bg-white/10" : "bg-lightGray"}`}
-      >
-        <p className="text-start">{item.title}</p>
-        <span
-          className={`transition-all duration-500 text-2xl ${active == ind ? "rotate-45" : "rotate-0"}`}
+    <EleAniamtion i={ind}>
+      <div className="bg-lightGray rounded-3xl overflow-hidden">
+        <button
+          onClick={handleACtiveItem}
+          className={`flex text-xl font-smibold  items-center transition-all duration-500 gap-x-8 justify-between p-6 ${active === ind ? "bg-white/10" : "bg-lightGray"}`}
         >
-          +
-        </span>
-      </button>
-      <div
-        className={`text-white/60 transition-all duration-500 ${active == ind ? "max-h-100" : "max-h-0"}`}
-      >
-        <p className="p-6 border-t">{item.answer}</p>
-      </div>
-    </div>
+          <p className="text-start">{item.title}</p>
+          <span
+            className={`transition-all duration-500 text-2xl ${active == ind ? "rotate-45" : "rotate-0"}`}
+          >
+            +
+          </span>
+        </button>
+        <div
+          className={`text-white/60 transition-all duration-500 ${active == ind ? "max-h-100" : "max-h-0"}`}
+        >
+          <p className="p-6 border-t">{item.answer}</p>
+        </div>
+      </div>{" "}
+    </EleAniamtion>
   );
 };

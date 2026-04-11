@@ -2,6 +2,7 @@ import { ROUTES } from "@/_constants/routes";
 import ShiningImg from "@/components/shining-img";
 import Button from "@/components/ui/button";
 import SectionHeader from "@/components/ui/section-header";
+import EleAniamtion from "@/components/ui/sliding-ele-animation";
 import { OUR_TOOLS } from "@/data/specialties";
 
 export default function SpecialtiesSection() {
@@ -28,16 +29,18 @@ export default function SpecialtiesSection() {
 
         {/* four steps */}
         <div className="grid grid-cols-2 gap-6">
-          {OUR_TOOLS.map(({ Icon, title, des }) => (
-            <div
-              className="space-y-4 hover:[&>svg]:text-white hover:[&>svg]:rotate-y-180"
-              key={title}
-            >
-              <Icon className="transition-all duration-500 text-4xl text-darkBlue" />
-              <h2 className="font-bold text-lg">{title}</h2>
-              <p className="text-white/60">{des}</p>
-            </div>
-          ))}
+          <EleAniamtion>
+            {OUR_TOOLS.map(({ Icon, title, des }) => (
+              <div
+                className="space-y-4 hover:[&>svg]:text-white hover:[&>svg]:rotate-y-180"
+                key={title}
+              >
+                <Icon className="transition-all duration-500 text-4xl text-darkBlue" />
+                <h2 className="font-bold text-lg">{title}</h2>
+                <p className="text-white/60">{des}</p>
+              </div>
+            ))}
+          </EleAniamtion>
         </div>
       </div>
 

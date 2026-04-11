@@ -1,4 +1,5 @@
 import SectionHeader from "@/components/ui/section-header";
+import EleAniamtion from "@/components/ui/sliding-ele-animation";
 import { AiOutlineAim, AiFillEye } from "react-icons/ai";
 
 const OUR_MISSION = [
@@ -27,12 +28,14 @@ export default function AboutSection() {
 
       {/* our mission */}
       <div className="flex-center gap-12!">
-        <div className="flex-center flex-col gap-0! shining-text flex-1">
-          <span className="text-[12rem] leading-tight">3</span>
-          <p className="rounded-tag border-transparent!">
-            Years Of Experience
-          </p>
-        </div>
+        <EleAniamtion>
+          <div className="flex-center flex-col gap-0! shining-text flex-1">
+            <span className="text-[12rem] leading-tight">3</span>
+            <p className="rounded-tag border-transparent!">
+              Years Of Experience
+            </p>
+          </div>
+        </EleAniamtion>
 
         <div className="grid grid-cols-2 gap-10 flex-2">
           {OUR_MISSION.map(({ title, Icon, des }) => (
@@ -40,16 +43,20 @@ export default function AboutSection() {
               className="space-y-4 hover:[&>svg]:text-white hover:[&>svg]:rotate-y-180"
               key={title}
             >
-              <Icon className="transition-all duration-500 text-darkBlue text-5xl" />
-              <h2 className="font-bold text-2xl">{title}</h2>
-              <p className="text-white/60">{des}</p>
+              <EleAniamtion>
+                <Icon className="text-darkBlue text-5xl" />
+                <h2 className="font-bold text-2xl">{title}</h2>
+                <p className="text-white/60">{des}</p>
+              </EleAniamtion>
             </div>
           ))}
-          <p className="col-span-2 text-white/60">
-            We deliver enterprise projects with Red Hat across Europe.
-            We have established operations in the UAE and are building
-            a full Center of Excellence in Egypt.
-          </p>
+          <EleAniamtion>
+            <p className="col-span-2 text-white/60">
+              We deliver enterprise projects with Red Hat across
+              Europe. We have established operations in the UAE and
+              are building a full Center of Excellence in Egypt.
+            </p>
+          </EleAniamtion>
         </div>
       </div>
     </section>

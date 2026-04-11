@@ -3,6 +3,7 @@
 import { applicationAction } from "@/actions/application";
 import Button from "@/components/ui/button";
 import SectionHeader from "@/components/ui/section-header";
+import EleAniamtion from "@/components/ui/sliding-ele-animation";
 import Toast from "@/components/ui/toast";
 import { JOB_ROLES } from "@/data/available-roles";
 import { useActionState } from "react";
@@ -29,98 +30,99 @@ export default function ApplicationForm() {
         action={formAction}
         className="space-y-6 [&_p]:text-red-400"
       >
-        {/* FULL NAME */}
-        <div>
-          <input
-            defaultValue={state?.values?.fullName}
-            placeholder="Full name"
-            type="text"
-            name="fullName"
-          />
-          {state?.errors?.fullName && (
-            <p>{state.errors.fullName[0]}</p>
-          )}
-        </div>
-
-        {/* EMAIL */}
-        <div>
-          <input
-            defaultValue={state?.values?.email}
-            placeholder="Email address"
-            type="text"
-            name="email"
-          />
-          {state?.errors?.email && <p>{state.errors.email[0]}</p>}
-        </div>
-
-        {/* PHONE */}
-        <div>
-          <input
-            defaultValue={state?.values?.phone}
-            placeholder="Phone number"
-            className="appearance-none"
-            type="text"
-            name="phone"
-          />
-          {state?.errors?.phone && <p>{state.errors.phone[0]}</p>}
-        </div>
-
-        {/* GENDER  */}
-        <div className="space-y-2">
-          <h2>Gender</h2>
-
-          <div className="flex gap-6 items-start [&>label]:flex [&>label]:gap-2">
-            <label>
-              <input
-                type="radio"
-                name="gender"
-                value="female"
-                defaultChecked={state?.values?.gender === "female"}
-              />
-              female
-            </label>
-
-            <label>
-              <input
-                type="radio"
-                name="gender"
-                value="male"
-                defaultChecked={state?.values?.gender === "male"}
-              />
-              male
-            </label>
+        <EleAniamtion i={0}>
+          {/* FULL NAME */}
+          <div>
+            <input
+              defaultValue={state?.values?.fullName}
+              placeholder="Full name"
+              type="text"
+              name="fullName"
+            />
+            {state?.errors?.fullName && (
+              <p>{state.errors.fullName[0]}</p>
+            )}
           </div>
 
-          {state?.errors?.gender && <p>{state.errors.gender[0]}</p>}
-        </div>
+          {/* EMAIL */}
+          <div>
+            <input
+              defaultValue={state?.values?.email}
+              placeholder="Email address"
+              type="text"
+              name="email"
+            />
+            {state?.errors?.email && <p>{state.errors.email[0]}</p>}
+          </div>
 
-        {/* ROLE  */}
-        <div>
-          <select
-            className="appearance-none"
-            name="role"
-            key={state?.values?.role}
-            defaultValue={state?.values?.role}
-          >
-            <option value="">Select a role</option>
+          {/* PHONE */}
+          <div>
+            <input
+              defaultValue={state?.values?.phone}
+              placeholder="Phone number"
+              className="appearance-none"
+              type="text"
+              name="phone"
+            />
+            {state?.errors?.phone && <p>{state.errors.phone[0]}</p>}
+          </div>
 
-            {JOB_ROLES.map(({ value, label }) => (
-              <option value={value} key={value}>
-                {label}
-              </option>
-            ))}
-          </select>
+          {/* GENDER  */}
+          <div className="space-y-2">
+            <h2>Gender</h2>
 
-          {state?.errors?.role && <p>{state.errors.role[0]}</p>}
-        </div>
+            <div className="flex gap-6 items-start [&>label]:flex [&>label]:gap-2">
+              <label>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  defaultChecked={state?.values?.gender === "female"}
+                />
+                female
+              </label>
 
-        {/* CV */}
-        <div>
-          <input type="file" name="cv" accept="application/pdf" />
+              <label>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  defaultChecked={state?.values?.gender === "male"}
+                />
+                male
+              </label>
+            </div>
 
-          {state?.errors?.cv && <p>{state.errors.cv[0]}</p>}
-        </div>
+            {state?.errors?.gender && <p>{state.errors.gender[0]}</p>}
+          </div>
 
+          {/* ROLE  */}
+          <div>
+            <select
+              className="appearance-none"
+              name="role"
+              key={state?.values?.role}
+              defaultValue={state?.values?.role}
+            >
+              <option value="">Select a role</option>
+
+              {JOB_ROLES.map(({ value, label }) => (
+                <option value={value} key={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+
+            {state?.errors?.role && <p>{state.errors.role[0]}</p>}
+          </div>
+
+          {/* CV */}
+          <div>
+            <input type="file" name="cv" accept="application/pdf" />
+
+            {state?.errors?.cv && <p>{state.errors.cv[0]}</p>}
+          </div>
+        </EleAniamtion>
         {/* show toast confirm the application was sent */}
         {state?.success && (
           <Toast
@@ -132,6 +134,7 @@ export default function ApplicationForm() {
 
         {/* SUBMIT */}
         <Button
+          slide
           as="button"
           variant="shining"
           type="submit"

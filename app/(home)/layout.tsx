@@ -12,7 +12,8 @@ export default function LayoutContainer({
     <div className="w-[70%] mx-auto relative z-50">
       <Navigation />
       <div className="space-y-36">
-        {children}
+        {/* in the first render we need min h vh so the shared content dont show first and looks awkward */}
+        <div className="space-y-36 min-h-dvh">{children}</div>
 
         {/* shared content across each page */}
         <QuestionsAskedSection />
