@@ -2,6 +2,12 @@ import HeroPage from "@/components/layout/hero-page";
 import ContactInformation from "./components/contact-information";
 import ContactForm from "./components/contact-form";
 
+export const metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with us to discuss your project. We’re here to help you build powerful digital solutions.",
+};
+
 export default function Contact() {
   return (
     <>

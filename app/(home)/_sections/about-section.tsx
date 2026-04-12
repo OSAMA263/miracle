@@ -27,7 +27,7 @@ export default function AboutSection() {
       </SectionHeader>
 
       {/* our mission */}
-      <div className="lg:flex-center gap-12!">
+      <div className="flex-center max-lg:flex-col gap-12!">
         <EleAniamtion>
           <div className="flex-center mb-10 flex-col gap-0! shining-text flex-1">
             <span className="text-[12rem] leading-tight block">3</span>

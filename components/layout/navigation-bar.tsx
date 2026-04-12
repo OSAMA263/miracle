@@ -5,14 +5,17 @@ import LogoLink from "../ui/logo";
 import { NAV_LINKS } from "@/_constants/nav-links";
 import { usePathname } from "next/navigation";
 import { ROUTES } from "@/_constants/routes";
+import NavbarSmallScreens from "./navbar-small-screens";
 
 export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <header className="flex absolute w-full items-center justify-between py-10 z-50">
+    <header className="flex max-lg:relative absolute items-center justify-between lg:py-10 py-4 z-50 max-lg:backdrop-blur-lg max-lg:border-b w-full border-white/20">
       <LogoLink />
-      <nav className="rounded-full p-3 bg-lightGray border border-white/5">
+
+      {/* navigation links in desktops */}
+      <nav className="rounded-full p-3 bg-lightGray border border-white/5 max-lg:hidden">
         <ul className="flex items-center font-smibold">
           {NAV_LINKS.map(({ url, label }) => (
             <li key={label}>
@@ -26,11 +29,18 @@ export default function Navigation() {
           ))}
         </ul>
       </nav>
-      <div className="flex items-center gap-4">
-        <Button variant="shining" as="link" href={ROUTES.CONTACT}>
-          Contact Us
-        </Button>
-      </div>
+
+      {/* navbar on small screens */}
+      <NavbarSmallScreens />
+
+      <Button
+        className="max-lg:hidden!"
+        variant="shining"
+        as="link"
+        href={ROUTES.CONTACT}
+      >
+        Contact Us
+      </Button>
     </header>
   );
 }

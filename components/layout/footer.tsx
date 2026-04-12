@@ -7,7 +7,7 @@ import { CONTACT_INFO } from "@/data/contact-info";
 export default function Footer() {
   return (
     <footer className="py-14 border-t border-white/10">
-      <div className="grid grid-cols-3 gap-10 *:space-y-8 justify-items-center">
+      <div className="grid lg:grid-cols-3 gap-10 *:space-y-8 lg:justify-items-center">
         <div>
           <LogoLink />
           <span className="text-white/60">
@@ -20,20 +20,8 @@ export default function Footer() {
         {/* navigation links */}
         <div>
           <h2 className="text-2xl font-bold">Quick Links</h2>
-          <div className="flex flex-col space-y-3">
-            {NAV_LINKS.map(({ label, url }, i) => (
-              <Link
-                href={url}
-                key={i}
-                className="hover:text-white/40"
-              >
-                {label}
-              </Link>
-            ))}
-            <Link href={ROUTES.CONTACT}>Contact us</Link>
-          </div>
+          <PlainLinks />
         </div>
-
         {/* contact informations */}
         <div>
           <h2 className="text-2xl font-bold">Contact Informations</h2>
@@ -61,3 +49,16 @@ export default function Footer() {
     </footer>
   );
 }
+
+export const PlainLinks = () => {
+  return (
+    <div className="flex flex-col space-y-3">
+      {NAV_LINKS.map(({ label, url }, i) => (
+        <Link href={url} key={i} className="hover:text-white/40">
+          {label}
+        </Link>
+      ))}
+      <Link href={ROUTES.CONTACT}>Contact us</Link>
+    </div>
+  );
+};
