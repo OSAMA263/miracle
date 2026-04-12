@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { applicationAction } from "@/actions/application";

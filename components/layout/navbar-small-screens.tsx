@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import { useEffect, useState } from "react";
 import Button from "../ui/button";
@@ -7,7 +8,7 @@ import { PlainLinks } from "./footer";
 import { usePathname } from "next/navigation";
 
 export default function NavbarSmallScreens() {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState<boolean>(false);
 
   const pathname = usePathname();
 

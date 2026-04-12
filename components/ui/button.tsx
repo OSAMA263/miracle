@@ -1,50 +1,49 @@
 import Link from "next/link";
+import { ComponentPropsWithoutRef } from "react";
 import EleAniamtion from "./sliding-ele-animation";
 
-type ButtonTypes = {
-  as: "button" | "link";
+type BaseProps = {
   variant: "shining" | "filling";
   className?: string;
   children: React.ReactNode;
-  slide: boolean;
+  slide?: boolean;
 };
 
-export default function Button(props: ButtonTypes) {
-  const {
-    as = "link",
-    variant,
-    className = "",
-    children,
-    slide = false,
-    ...rest
-  } = props;
+type ButtonProps = BaseProps & {
+  as: "button";
+} & ComponentPropsWithoutRef<"button">;
 
-  // link to a diffrent url
+type LinkProps = BaseProps & {
+  as: "link";
+} & ComponentPropsWithoutRef<typeof Link>;
+
+type ButtonTypes = ButtonProps | LinkProps;
+
+export default function Button(props: ButtonTypes) {
+  const { as = "link", variant, className = "", children, slide = false, ...rest } = props;
+
   const link = (
     <div>
       <Link
         className={`btn max-md:text-sm ${variant} ${className}`}
-        {...rest}
+        {...(rest as ComponentPropsWithoutRef<typeof Link>)}
       >
         {children}
       </Link>
     </div>
   );
 
-  // a normal button
   const btn = (
     <button
       className={`btn disabled:opacity-50! max-md:text-sm ${variant} ${className}`}
-      {...rest}
+      {...(rest as ComponentPropsWithoutRef<"button">)}
     >
       {children}
     </button>
   );
 
-  // retun animated link or just the link
   if (as === "link")
     return slide ? <EleAniamtion>{link}</EleAniamtion> : link;
 
-  // same for the button
   return slide ? <EleAniamtion>{btn}</EleAniamtion> : btn;
 }

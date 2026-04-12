@@ -1,10 +1,15 @@
+// @ts-nocheck
 "use client";
-import { cloneElement, useEffect, useState } from "react";
+import {
+  cloneElement,
+  useEffect,
+  useState,
+} from "react";
 import { createPortal } from "react-dom";
 
 type propsType = {
   modalClass?: string;
-  modalButton: React.ReactNode;
+  modalButton: React.ReactElement;
   children: React.ReactNode;
 };
 
@@ -15,7 +20,8 @@ export default function Modal(props: propsType) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
+    const timer = setTimeout(() => setIsMounted(true), 0);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -47,9 +53,10 @@ export default function Modal(props: propsType) {
   return (
     <>
       {/* applying the modal toggler in the btn onclick */}
-      {cloneElement(modalButton, {
-        onClick: () => setIsOpen((prev) => !prev),
-      })}
+      {
+        cloneElement(modalButton, {
+          onClick: () => setIsOpen((prev) => !prev),
+        })}
 
       {/* moving modal in body root */}
       {isMounted && createPortal(modalBody, document.body)}

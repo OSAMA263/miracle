@@ -24,7 +24,7 @@ const sponsors = [
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-60">
+    <section id="hero" className="lg:pt-60 pt-30">
       <GlowingCircle className="flex-center flex-col gap-14!">
         <SectionHeader
           className="space-y-2 text-center [&_h2]:lg:text-5xl!"

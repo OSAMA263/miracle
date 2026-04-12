@@ -1,3 +1,5 @@
+import { ZodSchema } from "zod";
+
 export const delay = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -6,6 +8,7 @@ export async function checkValidation({
   schema,
 }: {
   data: FormData;
+  schema: ZodSchema;
 }) {
   const formData = Object.fromEntries(data);
   const validation = schema.safeParse(formData);
